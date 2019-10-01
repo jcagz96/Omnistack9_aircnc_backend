@@ -1,8 +1,20 @@
 const express = require('express');
 const routes = require('./routes');
 const dotenv = require('dotenv').config();
+const mongoose = require('mongoose');
 
 const app = express();
+
+mongoose.connect(process.env.DB_CONNECT,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+
+    },
+    () => {
+        console.log(`Database connected `);
+    }
+);
 
 //GET,  POST,   PUT,   DELETE
 
@@ -12,8 +24,9 @@ const app = express();
 
 
 app.use(express.json());
+app.use(routes);
 
 
 app.listen(process.env.PORT, () => {
-    console.log(`Server is running... Port: ${process.env.PORT}`)
+    console.log(`Server is running... Port: ${process.env.PORT}`);
 });
