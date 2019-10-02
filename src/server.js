@@ -2,6 +2,7 @@ const express = require('express');
 const routes = require('./routes');
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const app = express();
 
@@ -22,7 +23,7 @@ mongoose.connect(process.env.DB_CONNECT,
 //req.params = Acessar route params   , ex: (http://localhost:3333/users/1)
 //req.body = Acessar corpo da requisição , ex: {"nome" : "Joao"}
 
-
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
