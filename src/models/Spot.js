@@ -19,4 +19,4 @@ SpotSchema.virtual('thumbnail_url').get(function () {
     return `${process.env.BASE_URL}/files/${this.thumbnail}`;
 })
 
-module.exports = mongoose.model('Spot', SpotSchema)
+module.exports = mongoose.model('Spot', SpotSchema);
