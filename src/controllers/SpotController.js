@@ -11,11 +11,27 @@ module.exports = {
     },
 
     async store(req, res) {
-        const { filename } = req.file;
+
+        var filename = ''
+
+        if (process.env.STORAGE_TYPE === 's3') {
+            console.log('armazenamento na amazon');
+            const { location } = req.file;
+            filename = location;
+
+        }
+        else {
+            console.log('armazenamento local');
+            filename = req.file.filename;
+        }
+
+
         const { company, techs, price } = req.body;
         const { user_id } = req.headers;
 
 
+
+        console.log(filename);
 
         const user = await User.findById(user_id);
 
