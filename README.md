@@ -5,7 +5,7 @@ Companies receive these bookings in real time and accept or reject.
 Developers receive companies response in real time too.
 
 ![Login screen](https://github.com/jcagz96/Omnistack9_aircnc_backend/blob/master/src/assets/readmeImages/1.JPG?raw=true)
-![](https://github.com/jcagz96/Omnistack9_aircnc_backend/blob/master/src/assets/readmeImages/1.JPG2.jpg?raw=true)
+![Inside app](https://github.com/jcagz96/Omnistack9_aircnc_backend/blob/master/src/assets/readmeImages/2.JPG.jpg?raw=true)
 
 ## aircnc backend
 Backend API for [aircnc mobile App](https://github.com/jcagz96/Omnistack9_aircnc_mobile)
