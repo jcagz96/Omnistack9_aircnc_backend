@@ -17,6 +17,7 @@ const SpotSchema = new mongoose.Schema({
 
 SpotSchema.virtual('thumbnail_url').get(function () {
     return `${process.env.BASE_URL}/files/${this.thumbnail}`;
+    //teste para o novo ramo
 })
 
 module.exports = mongoose.model('Spot', SpotSchema)
