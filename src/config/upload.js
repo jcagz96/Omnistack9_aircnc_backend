@@ -15,11 +15,12 @@ const storageTypes = {
             const name = path.basename(file.originalname, ext)
 
             cb(null, `${name}_${Date.now()}${ext}`);
-        }
+        },
+
     }),
     s3: multerS3({
         s3: new aws.S3(),
-        bucket: 'tinfort',
+        bucket: 'aircnc-spots',
         contentType: multerS3.AUTO_CONTENT_TYPE,    //para que o arquivo seja aberto na browser quando acessado
         acl: 'public-read',
         key: (req, file, cb) => {
