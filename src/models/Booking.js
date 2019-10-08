@@ -21,6 +21,7 @@ const BookingSchema = new mongoose.Schema({
 });
 
 BookingSchema.virtual('formated_date').get(function () {
+
     return moment(this.date).format('DD-MM-YYYY h:mm:ss A');
 })
 
